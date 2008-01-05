@@ -1,4 +1,5 @@
 Summary:	Utility for extracting Broadcom 43xx firmware
+Summary(pl.UTF-8):	Narzędzie do wyciągania firmware'u dla układów Broadcom 43xx
 Name:		bcm43xx-fwcutter
 Version:	20071026
 Release:	1
@@ -10,8 +11,12 @@ URL:		http://linuxwireless.org/en/users/Drivers/b43#devicefirmware
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-wcutter is a tool which can extract firmware from various source
-files. It's written for BCM43xx driver files.
+fwcutter is a tool which can extract firmware from various source
+files. It's written for bcm43xx driver.
+
+%description -l pl.UTF-8
+fwcutter to narzędzie potrafiące wyciągać firmware z różnych plików
+źródłowych. To narzędzie zostało napisane dla sterownika bcm43xx.
 
 %prep
 %setup -q -n %{name}
@@ -35,5 +40,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man?/*
+%attr(755,root,root) %{_bindir}/bcm43xx-fwcutter
+%{_mandir}/man1/bcm43xx-fwcutter.1*
